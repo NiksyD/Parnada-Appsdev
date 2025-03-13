@@ -71,6 +71,7 @@
             this.materialCard1.Margin = new System.Windows.Forms.Padding(0);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(954, 636);
             this.materialCard1.TabIndex = 38;
             // 

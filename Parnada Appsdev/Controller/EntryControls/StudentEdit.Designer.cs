@@ -48,6 +48,7 @@
             this.tbFirstName = new MaterialSkin.Controls.MaterialTextBox2();
             this.tbMiddleName = new MaterialSkin.Controls.MaterialTextBox2();
             this.tbLastName = new MaterialSkin.Controls.MaterialTextBox2();
+            this.tbStudentID = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialCard1.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -61,6 +62,7 @@
             this.materialCard1.Controls.Add(this.materialLabel2);
             this.materialCard1.Controls.Add(this.materialLabel1);
             this.materialCard1.Controls.Add(this.materialLabel3);
+            this.materialCard1.Controls.Add(this.tbStudentID);
             this.materialCard1.Controls.Add(this.flowLayoutPanel4);
             this.materialCard1.Controls.Add(this.flowLayoutPanel3);
             this.materialCard1.Controls.Add(this.flowLayoutPanel1);
@@ -81,7 +83,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.materialLabel2.Location = new System.Drawing.Point(40, 252);
+            this.materialLabel2.Location = new System.Drawing.Point(36, 330);
             this.materialLabel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
@@ -122,7 +124,7 @@
             this.flowLayoutPanel4.Controls.Add(this.cboSemester);
             this.flowLayoutPanel4.Controls.Add(this.cboRemarks);
             this.flowLayoutPanel4.Controls.Add(this.cboStatus);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(44, 423);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(44, 474);
             this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(820, 49);
@@ -220,7 +222,7 @@
             this.flowLayoutPanel3.Controls.Add(this.cboCourse);
             this.flowLayoutPanel3.Controls.Add(this.cboCurriculumYear);
             this.flowLayoutPanel3.Controls.Add(this.cboYear);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(44, 332);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(44, 383);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(820, 50);
@@ -403,7 +405,7 @@
             this.flowLayoutPanel2.Controls.Add(this.tbFirstName);
             this.flowLayoutPanel2.Controls.Add(this.tbMiddleName);
             this.flowLayoutPanel2.Controls.Add(this.tbLastName);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(40, 165);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(40, 243);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 30);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(820, 48);
@@ -506,6 +508,39 @@
             this.tbLastName.TrailingIcon = ((System.Drawing.Image)(resources.GetObject("tbLastName.TrailingIcon")));
             this.tbLastName.UseSystemPasswordChar = false;
             // 
+            // tbStudentID
+            // 
+            this.tbStudentID.AnimateReadOnly = true;
+            this.tbStudentID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbStudentID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbStudentID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tbStudentID.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbStudentID.Depth = 0;
+            this.tbStudentID.Enabled = false;
+            this.tbStudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbStudentID.HideSelection = true;
+            this.tbStudentID.Hint = "Student ID";
+            this.tbStudentID.LeadingIcon = null;
+            this.tbStudentID.Location = new System.Drawing.Point(40, 165);
+            this.tbStudentID.Margin = new System.Windows.Forms.Padding(0, 0, 50, 0);
+            this.tbStudentID.MaxLength = 32767;
+            this.tbStudentID.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbStudentID.Name = "tbStudentID";
+            this.tbStudentID.PasswordChar = '\0';
+            this.tbStudentID.PrefixSuffixText = null;
+            this.tbStudentID.ReadOnly = false;
+            this.tbStudentID.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbStudentID.SelectedText = "";
+            this.tbStudentID.SelectionLength = 0;
+            this.tbStudentID.SelectionStart = 0;
+            this.tbStudentID.ShortcutsEnabled = true;
+            this.tbStudentID.Size = new System.Drawing.Size(240, 48);
+            this.tbStudentID.TabIndex = 45;
+            this.tbStudentID.TabStop = false;
+            this.tbStudentID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbStudentID.TrailingIcon = ((System.Drawing.Image)(resources.GetObject("tbStudentID.TrailingIcon")));
+            this.tbStudentID.UseSystemPasswordChar = false;
+            // 
             // StudentEdit
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -544,5 +579,6 @@
         private MaterialSkin.Controls.MaterialTextBox2 tbFirstName;
         private MaterialSkin.Controls.MaterialTextBox2 tbMiddleName;
         private MaterialSkin.Controls.MaterialTextBox2 tbLastName;
+        private MaterialSkin.Controls.MaterialTextBox2 tbStudentID;
     }
 }

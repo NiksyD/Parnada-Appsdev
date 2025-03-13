@@ -14,15 +14,7 @@ namespace Parnada_Appsdev.Controller
 {
     public partial class Students: UserControl
     {
-        public string firstName;
-        public string middleName;
-        public string lastName;
-        public string course;
-        public string curriculumYear;
-        public int yearLevel;
-        public int semester;
-        public string remarks;
-        public string status;
+        
 
         public Students()
         {
@@ -35,13 +27,8 @@ namespace Parnada_Appsdev.Controller
         {
             var repo = new RepositoryStudent();
             dgvStudents.DataSource = repo.GetStudents();
-            dgvStudents.Refresh();
-        }
-
-        private void studentRefresh_Click(object sender, EventArgs e)
-        {
-            StudentsReader();
             RemoveUnnecessaryColumn();
+            dgvStudents.Refresh();
         }
 
         private void studentAdd_Click(object sender, EventArgs e)
@@ -55,20 +42,21 @@ namespace Parnada_Appsdev.Controller
 
             try
             {
-                firstName = dgvStudents.SelectedRows[0].Cells[1].Value?.ToString() ?? "";
-                middleName = dgvStudents.SelectedRows[0].Cells[2].Value?.ToString() ?? "";
-                lastName = dgvStudents.SelectedRows[0].Cells[3].Value?.ToString() ?? "";
-                course = dgvStudents.SelectedRows[0].Cells[4].Value?.ToString() ?? "";
-                curriculumYear = dgvStudents.SelectedRows[0].Cells[5].Value?.ToString() ?? "";
+                int studentId = Convert.ToInt32(dgvStudents.SelectedRows[0].Cells[0].Value);
+                string firstName = dgvStudents.SelectedRows[0].Cells[1].Value?.ToString() ?? "";
+                string middleName = dgvStudents.SelectedRows[0].Cells[2].Value?.ToString() ?? "";
+                string lastName = dgvStudents.SelectedRows[0].Cells[3].Value?.ToString() ?? "";
+                string course = dgvStudents.SelectedRows[0].Cells[5].Value?.ToString() ?? "";
+                string curriculumYear = dgvStudents.SelectedRows[0].Cells[6].Value?.ToString() ?? "";
 
                 // Use TryParse to avoid format exceptions
-                yearLevel = int.TryParse(dgvStudents.SelectedRows[0].Cells[6].Value?.ToString(), out int yl) ? yl : 0;
-                semester = int.TryParse(dgvStudents.SelectedRows[0].Cells[7].Value?.ToString(), out int sem) ? sem : 0;
+                int yearLevel = int.TryParse(dgvStudents.SelectedRows[0].Cells[7].Value?.ToString(), out int yl) ? yl : 0;
+                int semester = int.TryParse(dgvStudents.SelectedRows[0].Cells[8].Value?.ToString(), out int sem) ? sem : 0;
 
-                remarks = dgvStudents.SelectedRows[0].Cells[8].Value?.ToString() ?? "";
-                status = dgvStudents.SelectedRows[0].Cells[9].Value?.ToString() ?? "";
+                string remarks = dgvStudents.SelectedRows[0].Cells[9].Value?.ToString() ?? "";
+                string status = dgvStudents.SelectedRows[0].Cells[10].Value?.ToString() ?? "";
 
-                StudentEdit studentEdit = new StudentEdit(firstName, middleName, lastName, course, curriculumYear, yearLevel, semester, remarks, status);
+                StudentEdit studentEdit = new StudentEdit(studentId,firstName, middleName, lastName, course, curriculumYear, yearLevel, semester, remarks, status);
                 ShowUserControl(studentEdit);
             }
             catch (Exception ex)
@@ -118,5 +106,9 @@ namespace Parnada_Appsdev.Controller
             dgvStudents.Columns[4].Visible = false;
         }
 
+        private void Students_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            StudentsReader();
+        }
     }
 }

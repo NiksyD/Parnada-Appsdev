@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.enrollmentImgList = new System.Windows.Forms.ImageList(this.components);
             this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.studentDelete = new MaterialSkin.Controls.MaterialButton();
             this.studentEdit = new MaterialSkin.Controls.MaterialButton();
-            this.studentRefresh = new MaterialSkin.Controls.MaterialButton();
             this.searchBox = new MaterialSkin.Controls.MaterialTextBox();
             this.studentAdd = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
@@ -58,23 +57,23 @@
             this.dgvStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvStudents.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvStudents.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(224)))), ((int)(((byte)(234)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(105)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(224)))), ((int)(((byte)(234)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(105)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(67)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(204)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(204)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStudents.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(67)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(204)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(204)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStudents.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvStudents.EnableHeadersVisualStyles = false;
             this.dgvStudents.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.dgvStudents.Location = new System.Drawing.Point(41, 190);
@@ -91,12 +90,11 @@
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.Controls.Add(this.studentDelete);
             this.flowLayoutPanel1.Controls.Add(this.studentEdit);
-            this.flowLayoutPanel1.Controls.Add(this.studentRefresh);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(508, 125);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(663, 125);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(445, 32);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(290, 32);
             this.flowLayoutPanel1.TabIndex = 15;
             // 
             // studentDelete
@@ -108,7 +106,7 @@
             this.studentDelete.DrawShadows = false;
             this.studentDelete.HighEmphasis = false;
             this.studentDelete.Icon = global::Parnada_Appsdev.Properties.Resources.remove_user;
-            this.studentDelete.Location = new System.Drawing.Point(310, 0);
+            this.studentDelete.Location = new System.Drawing.Point(155, 0);
             this.studentDelete.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.studentDelete.MouseState = MaterialSkin.MouseState.HOVER;
             this.studentDelete.Name = "studentDelete";
@@ -130,8 +128,8 @@
             this.studentEdit.DrawShadows = false;
             this.studentEdit.HighEmphasis = false;
             this.studentEdit.Icon = global::Parnada_Appsdev.Properties.Resources.edit_user;
-            this.studentEdit.Location = new System.Drawing.Point(155, 0);
-            this.studentEdit.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.studentEdit.Location = new System.Drawing.Point(0, 0);
+            this.studentEdit.Margin = new System.Windows.Forms.Padding(0);
             this.studentEdit.MouseState = MaterialSkin.MouseState.HOVER;
             this.studentEdit.Name = "studentEdit";
             this.studentEdit.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -142,28 +140,6 @@
             this.studentEdit.UseAccentColor = false;
             this.studentEdit.UseVisualStyleBackColor = true;
             this.studentEdit.Click += new System.EventHandler(this.studentEdit_Click);
-            // 
-            // studentRefresh
-            // 
-            this.studentRefresh.AutoSize = false;
-            this.studentRefresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.studentRefresh.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Dense;
-            this.studentRefresh.Depth = 0;
-            this.studentRefresh.DrawShadows = false;
-            this.studentRefresh.HighEmphasis = false;
-            this.studentRefresh.Icon = global::Parnada_Appsdev.Properties.Resources.reload;
-            this.studentRefresh.Location = new System.Drawing.Point(0, 0);
-            this.studentRefresh.Margin = new System.Windows.Forms.Padding(0);
-            this.studentRefresh.MouseState = MaterialSkin.MouseState.HOVER;
-            this.studentRefresh.Name = "studentRefresh";
-            this.studentRefresh.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.studentRefresh.Size = new System.Drawing.Size(135, 32);
-            this.studentRefresh.TabIndex = 17;
-            this.studentRefresh.Text = "Refresh";
-            this.studentRefresh.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
-            this.studentRefresh.UseAccentColor = false;
-            this.studentRefresh.UseVisualStyleBackColor = true;
-            this.studentRefresh.Click += new System.EventHandler(this.studentRefresh_Click);
             // 
             // searchBox
             // 
@@ -214,6 +190,7 @@
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "Students";
             this.Size = new System.Drawing.Size(994, 676);
+            this.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.Students_ControlRemoved);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -230,6 +207,5 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private MaterialSkin.Controls.MaterialButton studentDelete;
         private MaterialSkin.Controls.MaterialButton studentEdit;
-        private MaterialSkin.Controls.MaterialButton studentRefresh;
     }
 }

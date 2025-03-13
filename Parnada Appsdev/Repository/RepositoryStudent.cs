@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Parnada_Appsdev.Controller;
 using Parnada_Appsdev.Models;
 using Microsoft.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Parnada_Appsdev.Repository
 {
@@ -53,53 +54,34 @@ namespace Parnada_Appsdev.Repository
             }
         }
 
-        public void UpdateStudent(ModelStudent modelStudent)
+        public void UpdateStudent(ModelStudent student)
         {
-            try
+            string query = "UPDATE StudentsPrins SET FirstName = @FirstName, MiddleName = @MiddleName, LastName = @LastName, " +
+                           "Course = @Course, CurriculumYear = @CurriculumYear, YearLevel = @YearLevel, Semester = @Semester, " +
+                           "Remarks = @Remarks, Status = @Status WHERE ID = @ID";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    connection.Open();
-                    string sql = "UPDATE StudentsPrins SET " +
-                                 "FirstName = @FirstName, " +
-                                 "MiddleName = @MiddleName, " +
-                                 "LastName = @LastName, " +
-                                 "FullName = @FullName, " +
-                                 "Course = @Course, " +
-                                 "CurriculumYear = @CurriculumYear, " +
-                                 "YearLevel = @YearLevel, " +
-                                 "Semester = @Semester, " +
-                                 "Remarks = @Remarks, " +
-                                 "Status = @Status " +
-                                 "WHERE ID = @ID;";
+                    cmd.Parameters.AddWithValue("@FirstName", student.FirstName);
+                    cmd.Parameters.AddWithValue("@MiddleName", student.MiddleName);
+                    cmd.Parameters.AddWithValue("@LastName", student.LastName);
+                    cmd.Parameters.AddWithValue("@Course", student.Course);
+                    cmd.Parameters.AddWithValue("@CurriculumYear", student.CurriculumYear);
+                    cmd.Parameters.AddWithValue("@YearLevel", student.YearLevel);
+                    cmd.Parameters.AddWithValue("@Semester", student.Semester);
+                    cmd.Parameters.AddWithValue("@Remarks", student.Remarks);
+                    cmd.Parameters.AddWithValue("@Status", student.Status);
+                    cmd.Parameters.AddWithValue("@ID", student.ID);
 
-                    using (SqlCommand command = new SqlCommand(sql, connection))
-                    {
-                        command.Parameters.AddWithValue("@ID", modelStudent.ID);
-                        command.Parameters.AddWithValue("@FirstName", modelStudent.FirstName);
-                        command.Parameters.AddWithValue("@MiddleName", modelStudent.MiddleName);
-                        command.Parameters.AddWithValue("@LastName", modelStudent.LastName);
-                        command.Parameters.AddWithValue("@FullName", modelStudent.FullName);
-                        command.Parameters.AddWithValue("@Course", modelStudent.Course);
-                        command.Parameters.AddWithValue("@CurriculumYear", modelStudent.CurriculumYear);
-                        command.Parameters.AddWithValue("@YearLevel", modelStudent.YearLevel);
-                        command.Parameters.AddWithValue("@Semester", modelStudent.Semester);
-                        command.Parameters.AddWithValue("@Remarks", modelStudent.Remarks);
-                        command.Parameters.AddWithValue("@Status", modelStudent.Status);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
 
-                        command.ExecuteNonQuery();
-                    }
                 }
             }
-            catch (SqlException ex)
-            {
-                Console.WriteLine("SQL exception: " + ex.ToString());
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception: " + ex.ToString());
-            }
         }
+
 
 
         public void DeleteStudent(int id)

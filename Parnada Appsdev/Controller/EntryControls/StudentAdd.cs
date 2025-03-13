@@ -53,7 +53,7 @@ namespace Parnada_Appsdev.Controller.EntryControls
             MessageBox.Show("Student saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             Validator.ClearControls(this);
-
+            this.Parent.Controls.Remove(this);
         }
 
     }
