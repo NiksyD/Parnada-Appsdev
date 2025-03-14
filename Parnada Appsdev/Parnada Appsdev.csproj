@@ -41,6 +41,9 @@
     <Reference Include="Azure.Identity, Version=1.11.4.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>..\packages\Azure.Identity.1.11.4\lib\netstandard2.0\Azure.Identity.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin, Version=2.3.1.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.2.RTL.2.3.1.1\lib\net472\MaterialSkin.dll</HintPath>
     </Reference>
@@ -178,6 +181,18 @@
     <Compile Include="Controller\EntryControls\StudentEdit.Designer.cs">
       <DependentUpon>StudentEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controller\EntryControls\StudentEnrollmentEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controller\EntryControls\StudentEnrollmentEntry.Designer.cs">
+      <DependentUpon>StudentEnrollmentEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\EntryControls\SubjectScheduleEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controller\EntryControls\SubjectScheduleEntry.Designer.cs">
+      <DependentUpon>SubjectScheduleEntry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller\Students.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -209,6 +224,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controller\EntryControls\StudentEdit.resx">
       <DependentUpon>StudentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\EntryControls\StudentEnrollmentEntry.resx">
+      <DependentUpon>StudentEnrollmentEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\EntryControls\SubjectScheduleEntry.resx">
+      <DependentUpon>SubjectScheduleEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controller\Students.resx">
       <DependentUpon>Students.cs</DependentUpon>
@@ -275,6 +296,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hastag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-tb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />

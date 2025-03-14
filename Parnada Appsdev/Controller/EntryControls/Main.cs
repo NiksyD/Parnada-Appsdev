@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using Parnada_Appsdev.Controller;
+using Parnada_Appsdev.Controller.EntryControls;
 
 namespace Parnada_Appsdev
 {
@@ -37,7 +38,15 @@ namespace Parnada_Appsdev
             else if (selectedTab == tabPageLogout)
             {
                 this.Close();
-            }   
+            }
+            else if (selectedTab == tabPageSubjectScheduleEntry)
+            {
+                ShowUserControl(new SubjectScheduleEntry(), tabPageSubjectScheduleEntry);
+            }
+            else if (selectedTab == tabPageStudentEnrollmentEntry)
+            {
+                ShowUserControl(new StudentEnrollmentEntry(), tabPageStudentEnrollmentEntry);
+            }
         }
 
         public void ShowUserControl(UserControl control, TabPage tabPage)

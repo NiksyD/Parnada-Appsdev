@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Parnada_Appsdev.Controller
+namespace Parnada_Appsdev.Controller.EntryControls
 {
-    public partial class Subjects: UserControl
+    public partial class StudentEnrollmentEntry: UserControl
     {
-        public Subjects()
+        public StudentEnrollmentEntry()
         {
             InitializeComponent();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

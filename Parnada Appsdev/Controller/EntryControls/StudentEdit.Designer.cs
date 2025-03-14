@@ -34,38 +34,44 @@
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.cboSemester = new MaterialSkin.Controls.MaterialComboBox();
             this.cboRemarks = new MaterialSkin.Controls.MaterialComboBox();
             this.cboStatus = new MaterialSkin.Controls.MaterialComboBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.cboCourse = new MaterialSkin.Controls.MaterialComboBox();
             this.cboCurriculumYear = new MaterialSkin.Controls.MaterialComboBox();
-            this.cboYear = new MaterialSkin.Controls.MaterialComboBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnSave = new MaterialSkin.Controls.MaterialButton();
-            this.btnCancel = new MaterialSkin.Controls.MaterialButton();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.tbStudentID = new MaterialSkin.Controls.MaterialTextBox2();
             this.tbFirstName = new MaterialSkin.Controls.MaterialTextBox2();
             this.tbMiddleName = new MaterialSkin.Controls.MaterialTextBox2();
             this.tbLastName = new MaterialSkin.Controls.MaterialTextBox2();
-            this.tbStudentID = new MaterialSkin.Controls.MaterialTextBox2();
+            this.cboYear = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.cboSemester = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialCard1.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboYear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboSemester)).BeginInit();
             this.SuspendLayout();
             // 
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.materialLabel5);
+            this.materialCard1.Controls.Add(this.materialLabel4);
+            this.materialCard1.Controls.Add(this.flowLayoutPanel6);
             this.materialCard1.Controls.Add(this.materialLabel2);
             this.materialCard1.Controls.Add(this.materialLabel1);
             this.materialCard1.Controls.Add(this.materialLabel3);
             this.materialCard1.Controls.Add(this.tbStudentID);
             this.materialCard1.Controls.Add(this.flowLayoutPanel4);
             this.materialCard1.Controls.Add(this.flowLayoutPanel3);
-            this.materialCard1.Controls.Add(this.flowLayoutPanel1);
             this.materialCard1.Controls.Add(this.flowLayoutPanel2);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -130,33 +136,6 @@
             this.flowLayoutPanel4.Size = new System.Drawing.Size(820, 49);
             this.flowLayoutPanel4.TabIndex = 8;
             this.flowLayoutPanel4.TabStop = true;
-            // 
-            // cboSemester
-            // 
-            this.cboSemester.AutoResize = false;
-            this.cboSemester.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cboSemester.Depth = 0;
-            this.cboSemester.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboSemester.DropDownHeight = 174;
-            this.cboSemester.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboSemester.DropDownWidth = 121;
-            this.cboSemester.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.cboSemester.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cboSemester.FormattingEnabled = true;
-            this.cboSemester.Hint = "Semester";
-            this.cboSemester.IntegralHeight = false;
-            this.cboSemester.ItemHeight = 43;
-            this.cboSemester.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.cboSemester.Location = new System.Drawing.Point(0, 0);
-            this.cboSemester.Margin = new System.Windows.Forms.Padding(0, 0, 50, 0);
-            this.cboSemester.MaxDropDownItems = 4;
-            this.cboSemester.MouseState = MaterialSkin.MouseState.OUT;
-            this.cboSemester.Name = "cboSemester";
-            this.cboSemester.Size = new System.Drawing.Size(240, 49);
-            this.cboSemester.StartIndex = -1;
-            this.cboSemester.TabIndex = 8;
             // 
             // cboRemarks
             // 
@@ -315,90 +294,6 @@
             this.cboCurriculumYear.StartIndex = -1;
             this.cboCurriculumYear.TabIndex = 6;
             // 
-            // cboYear
-            // 
-            this.cboYear.AutoResize = false;
-            this.cboYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cboYear.Depth = 0;
-            this.cboYear.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboYear.DropDownHeight = 174;
-            this.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboYear.DropDownWidth = 121;
-            this.cboYear.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.cboYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cboYear.FormattingEnabled = true;
-            this.cboYear.Hint = "Year";
-            this.cboYear.IntegralHeight = false;
-            this.cboYear.ItemHeight = 43;
-            this.cboYear.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.cboYear.Location = new System.Drawing.Point(580, 0);
-            this.cboYear.Margin = new System.Windows.Forms.Padding(0);
-            this.cboYear.MaxDropDownItems = 4;
-            this.cboYear.MouseState = MaterialSkin.MouseState.OUT;
-            this.cboYear.Name = "cboYear";
-            this.cboYear.Size = new System.Drawing.Size(240, 49);
-            this.cboYear.StartIndex = -1;
-            this.cboYear.TabIndex = 7;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.Controls.Add(this.btnSave);
-            this.flowLayoutPanel1.Controls.Add(this.btnCancel);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(676, 545);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(184, 36);
-            this.flowLayoutPanel1.TabIndex = 41;
-            // 
-            // btnSave
-            // 
-            this.btnSave.AutoSize = false;
-            this.btnSave.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSave.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnSave.Depth = 0;
-            this.btnSave.HighEmphasis = true;
-            this.btnSave.Icon = null;
-            this.btnSave.Location = new System.Drawing.Point(97, 0);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSave.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSave.Name = "btnSave";
-            this.btnSave.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSave.Size = new System.Drawing.Size(87, 36);
-            this.btnSave.TabIndex = 40;
-            this.btnSave.Text = "Save";
-            this.btnSave.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnSave.UseAccentColor = false;
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.AutoSize = false;
-            this.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCancel.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnCancel.Depth = 0;
-            this.btnCancel.HighEmphasis = true;
-            this.btnCancel.Icon = null;
-            this.btnCancel.Location = new System.Drawing.Point(0, 0);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnCancel.Size = new System.Drawing.Size(87, 36);
-            this.btnCancel.TabIndex = 41;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
-            this.btnCancel.UseAccentColor = false;
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoSize = true;
@@ -411,6 +306,85 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(820, 48);
             this.flowLayoutPanel2.TabIndex = 1;
             this.flowLayoutPanel2.TabStop = true;
+            // 
+            // flowLayoutPanel6
+            // 
+            this.flowLayoutPanel6.AutoSize = true;
+            this.flowLayoutPanel6.Controls.Add(this.btnSave);
+            this.flowLayoutPanel6.Controls.Add(this.btnCancel);
+            this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(676, 545);
+            this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(184, 36);
+            this.flowLayoutPanel6.TabIndex = 57;
+            // 
+            // btnSave
+            // 
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(97, 0);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(87, 36);
+            this.btnSave.TabIndex = 45;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(0, 0);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(87, 36);
+            this.btnCancel.TabIndex = 46;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // tbStudentID
+            // 
+            this.tbStudentID.AnimateReadOnly = true;
+            this.tbStudentID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbStudentID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbStudentID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tbStudentID.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbStudentID.Depth = 0;
+            this.tbStudentID.Enabled = false;
+            this.tbStudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbStudentID.HideSelection = true;
+            this.tbStudentID.Hint = "Student ID";
+            this.tbStudentID.LeadingIcon = null;
+            this.tbStudentID.Location = new System.Drawing.Point(40, 165);
+            this.tbStudentID.Margin = new System.Windows.Forms.Padding(0, 0, 50, 0);
+            this.tbStudentID.MaxLength = 32767;
+            this.tbStudentID.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbStudentID.Name = "tbStudentID";
+            this.tbStudentID.PasswordChar = '\0';
+            this.tbStudentID.PrefixSuffixText = null;
+            this.tbStudentID.ReadOnly = false;
+            this.tbStudentID.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbStudentID.SelectedText = "";
+            this.tbStudentID.SelectionLength = 0;
+            this.tbStudentID.SelectionStart = 0;
+            this.tbStudentID.ShortcutsEnabled = true;
+            this.tbStudentID.Size = new System.Drawing.Size(240, 48);
+            this.tbStudentID.TabIndex = 45;
+            this.tbStudentID.TabStop = false;
+            this.tbStudentID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbStudentID.TrailingIcon = ((System.Drawing.Image)(resources.GetObject("tbStudentID.TrailingIcon")));
+            this.tbStudentID.UseSystemPasswordChar = false;
             // 
             // tbFirstName
             // 
@@ -508,38 +482,85 @@
             this.tbLastName.TrailingIcon = ((System.Drawing.Image)(resources.GetObject("tbLastName.TrailingIcon")));
             this.tbLastName.UseSystemPasswordChar = false;
             // 
-            // tbStudentID
+            // cboYear
             // 
-            this.tbStudentID.AnimateReadOnly = true;
-            this.tbStudentID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.tbStudentID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tbStudentID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tbStudentID.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.tbStudentID.Depth = 0;
-            this.tbStudentID.Enabled = false;
-            this.tbStudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tbStudentID.HideSelection = true;
-            this.tbStudentID.Hint = "Student ID";
-            this.tbStudentID.LeadingIcon = null;
-            this.tbStudentID.Location = new System.Drawing.Point(40, 165);
-            this.tbStudentID.Margin = new System.Windows.Forms.Padding(0, 0, 50, 0);
-            this.tbStudentID.MaxLength = 32767;
-            this.tbStudentID.MouseState = MaterialSkin.MouseState.OUT;
-            this.tbStudentID.Name = "tbStudentID";
-            this.tbStudentID.PasswordChar = '\0';
-            this.tbStudentID.PrefixSuffixText = null;
-            this.tbStudentID.ReadOnly = false;
-            this.tbStudentID.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbStudentID.SelectedText = "";
-            this.tbStudentID.SelectionLength = 0;
-            this.tbStudentID.SelectionStart = 0;
-            this.tbStudentID.ShortcutsEnabled = true;
-            this.tbStudentID.Size = new System.Drawing.Size(240, 48);
-            this.tbStudentID.TabIndex = 45;
-            this.tbStudentID.TabStop = false;
-            this.tbStudentID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tbStudentID.TrailingIcon = ((System.Drawing.Image)(resources.GetObject("tbStudentID.TrailingIcon")));
-            this.tbStudentID.UseSystemPasswordChar = false;
+            this.cboYear.BackColor = System.Drawing.Color.Transparent;
+            this.cboYear.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cboYear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboYear.Location = new System.Drawing.Point(580, 0);
+            this.cboYear.Margin = new System.Windows.Forms.Padding(0);
+            this.cboYear.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.cboYear.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.cboYear.Name = "cboYear";
+            this.cboYear.Size = new System.Drawing.Size(240, 49);
+            this.cboYear.TabIndex = 58;
+            this.cboYear.UpDownButtonFillColor = System.Drawing.Color.Teal;
+            this.cboYear.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // cboSemester
+            // 
+            this.cboSemester.BackColor = System.Drawing.Color.Transparent;
+            this.cboSemester.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cboSemester.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSemester.Location = new System.Drawing.Point(0, 0);
+            this.cboSemester.Margin = new System.Windows.Forms.Padding(0, 0, 50, 0);
+            this.cboSemester.Maximum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.cboSemester.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.cboSemester.Name = "cboSemester";
+            this.cboSemester.Size = new System.Drawing.Size(240, 49);
+            this.cboSemester.TabIndex = 51;
+            this.cboSemester.UpDownButtonFillColor = System.Drawing.Color.Teal;
+            this.cboSemester.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel5.FontType = MaterialSkin.MaterialSkinManager.fontType.Overline;
+            this.materialLabel5.Location = new System.Drawing.Point(46, 461);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(42, 13);
+            this.materialLabel5.TabIndex = 59;
+            this.materialLabel5.Text = "Semester";
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel4.FontType = MaterialSkin.MaterialSkinManager.fontType.Overline;
+            this.materialLabel4.Location = new System.Drawing.Point(627, 370);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(44, 13);
+            this.materialLabel4.TabIndex = 58;
+            this.materialLabel4.Text = "Year Level";
             // 
             // StudentEdit
             // 
@@ -552,8 +573,10 @@
             this.materialCard1.PerformLayout();
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cboYear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboSemester)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -565,20 +588,22 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private MaterialSkin.Controls.MaterialComboBox cboSemester;
         private MaterialSkin.Controls.MaterialComboBox cboRemarks;
         private MaterialSkin.Controls.MaterialComboBox cboStatus;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private MaterialSkin.Controls.MaterialComboBox cboCourse;
         private MaterialSkin.Controls.MaterialComboBox cboCurriculumYear;
-        private MaterialSkin.Controls.MaterialComboBox cboYear;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private MaterialSkin.Controls.MaterialButton btnSave;
-        private MaterialSkin.Controls.MaterialButton btnCancel;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private MaterialSkin.Controls.MaterialTextBox2 tbFirstName;
         private MaterialSkin.Controls.MaterialTextBox2 tbMiddleName;
         private MaterialSkin.Controls.MaterialTextBox2 tbLastName;
         private MaterialSkin.Controls.MaterialTextBox2 tbStudentID;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
+        private Guna.UI2.WinForms.Guna2Button btnSave;
+        private Guna.UI2.WinForms.Guna2Button btnCancel;
+        private Guna.UI2.WinForms.Guna2NumericUpDown cboYear;
+        private Guna.UI2.WinForms.Guna2NumericUpDown cboSemester;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
     }
 }

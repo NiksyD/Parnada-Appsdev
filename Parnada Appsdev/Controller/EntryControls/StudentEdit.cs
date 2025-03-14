@@ -12,7 +12,7 @@ using Parnada_Appsdev.Repository;
 
 namespace Parnada_Appsdev.Controller.EntryControls
 {
-    public partial class StudentEdit: UserControl
+    public partial class StudentEdit : UserControl
     {
         public StudentEdit(int ID, string firstName, string middleName, string lastName, string course, string curriculumYear, int yearLevel, int semester, string remarks, string status)
         {
@@ -25,8 +25,8 @@ namespace Parnada_Appsdev.Controller.EntryControls
             tbLastName.Text = lastName;
             cboCourse.SelectedIndex = cboCourse.Items.IndexOf(course);
             cboCurriculumYear.SelectedIndex = cboCurriculumYear.Items.IndexOf(curriculumYear);
-            cboYear.SelectedIndex = cboYear.Items.IndexOf(yearLevel.ToString());
-            cboSemester.SelectedIndex = cboSemester.Items.IndexOf(semester.ToString());
+            cboYear.Value = yearLevel;
+            cboSemester.Value = semester;
             cboRemarks.SelectedIndex = cboRemarks.Items.IndexOf(remarks);
             cboStatus.SelectedIndex = cboStatus.Items.IndexOf(status);
 
@@ -55,7 +55,7 @@ namespace Parnada_Appsdev.Controller.EntryControls
                 LastName = tbLastName.Text,
                 Course = cboCourse.Text,
                 CurriculumYear = cboCurriculumYear.Text,
-                YearLevel = int.Parse(cboYear.Text),
+                YearLevel = (int)cboYear.Value, // Fixed line
                 Semester = int.Parse(cboSemester.Text),
                 Remarks = cboRemarks.Text,
                 Status = cboStatus.Text,

@@ -34,6 +34,7 @@ namespace Parnada_Appsdev.Controller.EntryControls
 
             var repo = new RepositoryStudent();
 
+
             ModelStudent student = new ModelStudent
             {
                 FirstName = tbFirstName.Text,
