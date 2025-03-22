@@ -57,6 +57,10 @@ namespace Parnada_Appsdev.Controller
                 {
                     ClearControls(control);
                 }
+                if (control is Guna.UI2.WinForms.Guna2NumericUpDown numericUpDown)
+                {
+                    numericUpDown.Value = numericUpDown.Minimum;
+                }
             }
         }
 

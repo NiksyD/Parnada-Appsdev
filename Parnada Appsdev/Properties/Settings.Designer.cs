@@ -26,8 +26,9 @@ namespace Parnada_Appsdev.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\sqlexpress;Initial Catalog=SigmaDb;Integrated Security=True" +
-            ";Encrypt=True;TrustServerCertificate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\sqlexpress;Initial Catalog=Enrollment;Integrated Security=T" +
+            "rue;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application In" +
+            "tent=ReadWrite;Multi Subnet Failover=False")]
         public string PrinceDBConnectionString {
             get {
                 return ((string)(this["PrinceDBConnectionString"]));
