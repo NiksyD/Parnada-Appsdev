@@ -168,12 +168,13 @@
             // 
             // tbEdpCode
             // 
-            this.tbEdpCode.AnimateReadOnly = false;
+            this.tbEdpCode.AnimateReadOnly = true;
             this.tbEdpCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.tbEdpCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.tbEdpCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tbEdpCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.tbEdpCode.Depth = 0;
+            this.tbEdpCode.Enabled = false;
             this.tbEdpCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbEdpCode.HideSelection = true;
             this.tbEdpCode.Hint = "EDP Code";
@@ -200,12 +201,13 @@
             // 
             // tbSubjectCode
             // 
-            this.tbSubjectCode.AnimateReadOnly = false;
+            this.tbSubjectCode.AnimateReadOnly = true;
             this.tbSubjectCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.tbSubjectCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.tbSubjectCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tbSubjectCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.tbSubjectCode.Depth = 0;
+            this.tbSubjectCode.Enabled = false;
             this.tbSubjectCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbSubjectCode.HideSelection = true;
             this.tbSubjectCode.Hint = "Subject Code";

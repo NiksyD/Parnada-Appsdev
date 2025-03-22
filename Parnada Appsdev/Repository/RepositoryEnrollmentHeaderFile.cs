@@ -13,6 +13,47 @@ namespace Parnada_Appsdev.Repository
     {
         public readonly string _connectionString = "Data Source=localhost\\sqlexpress;Initial Catalog=Enrollment;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False;";
 
+        public List<EnrollmentHeaderFile> GetAllEnrollmentHeaders()
+        {
+            var enrollmentHeaders = new List<EnrollmentHeaderFile>();
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                using (var command = new SqlCommand(@"
+                SELECT ENRHFSTUDID, ENRHFSTUDDATEENROLL, ENRHFSTUDSCHLYR, ENRHFSTUDENCODER, ENRHFSTUDTOTALUNITS, ENRHFSTUDSTATUS 
+                FROM EnrollmentHeaderFile;", connection))
+                {
+                    connection.Open();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var enrollmentHeader = new EnrollmentHeaderFile
+                            {
+                                ENRHFSTUDID = reader.GetInt64(reader.GetOrdinal("ENRHFSTUDID")),
+                                ENRHFSTUDDATEENROLL = reader.GetDateTime(reader.GetOrdinal("ENRHFSTUDDATEENROLL")),
+                                ENRHFSTUDSCHLYR = reader.GetString(reader.GetOrdinal("ENRHFSTUDSCHLYR")),
+                                ENRHFSTUDENCODER = reader.GetString(reader.GetOrdinal("ENRHFSTUDENCODER")),
+                                ENRHFSTUDTOTALUNITS = reader.GetDouble(reader.GetOrdinal("ENRHFSTUDTOTALUNITS")),
+                                ENRHFSTUDSTATUS = reader.GetString(reader.GetOrdinal("ENRHFSTUDSTATUS"))
+                            };
+                            enrollmentHeaders.Add(enrollmentHeader);
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine($"SQL Exception: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+            return enrollmentHeaders;
+        }
+
+
         public DataTable GetEnrolledSubjects(long studentID)
         {
             DataTable dt = new DataTable();
@@ -93,6 +134,69 @@ namespace Parnada_Appsdev.Repository
                 return new Result { Success = false, ErrorMessage = ex.Message };
             }
         }
+
+        public Result DeleteEnrollmentHeader(long studentId)
+        {
+            var result = new Result();
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                using (var command = new SqlCommand(@"
+            DELETE FROM EnrollmentHeaderFile 
+            WHERE ENRHFSTUDID = @ENRHFSTUDID;", connection))
+                {
+                    command.Parameters.Add(new SqlParameter("@ENRHFSTUDID", studentId));
+
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    result.Success = rowsAffected > 0;
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine($"SQL Exception: {ex.Message}");
+                result.Success = false;
+                result.ErrorMessage = $"SQL Exception: {ex.Message}";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+                result.Success = false;
+                result.ErrorMessage = $"Exception: {ex.Message}";
+            }
+            return result;
+        }
+
+        public bool IsStudentEnrolled(long studentId)
+        {
+            bool isEnrolled = false;
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                using (var command = new SqlCommand(@"
+                SELECT COUNT(*) 
+                FROM EnrollmentHeaderFile 
+                WHERE ENRHFSTUDID = @ENRHFSTUDID;", connection))
+                {
+                    command.Parameters.Add(new SqlParameter("@ENRHFSTUDID", studentId));
+
+                    connection.Open();
+                    int count = (int)command.ExecuteScalar();
+                    isEnrolled = count > 0;
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine($"SQL Exception: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+            return isEnrolled;
+        }
+
+
 
         public sealed class Result
         {

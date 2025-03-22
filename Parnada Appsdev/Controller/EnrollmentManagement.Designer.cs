@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnEnrollStudent = new MaterialSkin.Controls.MaterialButton();
             this.btnViewEnrollmentDetail = new MaterialSkin.Controls.MaterialButton();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
+            this.btnViewEnrolledStudents = new MaterialSkin.Controls.MaterialButton();
             this.materialCard1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
@@ -75,11 +76,12 @@
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.Controls.Add(this.btnEnrollStudent);
             this.flowLayoutPanel1.Controls.Add(this.btnViewEnrollmentDetail);
+            this.flowLayoutPanel1.Controls.Add(this.btnViewEnrolledStudents);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(482, 106);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(229, 105);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(428, 32);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(681, 32);
             this.flowLayoutPanel1.TabIndex = 15;
             // 
             // btnEnrollStudent
@@ -91,7 +93,7 @@
             this.btnEnrollStudent.DrawShadows = false;
             this.btnEnrollStudent.HighEmphasis = false;
             this.btnEnrollStudent.Icon = global::Parnada_Appsdev.Properties.Resources.add;
-            this.btnEnrollStudent.Location = new System.Drawing.Point(253, 0);
+            this.btnEnrollStudent.Location = new System.Drawing.Point(506, 0);
             this.btnEnrollStudent.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnEnrollStudent.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEnrollStudent.Name = "btnEnrollStudent";
@@ -113,8 +115,8 @@
             this.btnViewEnrollmentDetail.DrawShadows = false;
             this.btnViewEnrollmentDetail.HighEmphasis = false;
             this.btnViewEnrollmentDetail.Icon = global::Parnada_Appsdev.Properties.Resources.search_file;
-            this.btnViewEnrollmentDetail.Location = new System.Drawing.Point(0, 0);
-            this.btnViewEnrollmentDetail.Margin = new System.Windows.Forms.Padding(0);
+            this.btnViewEnrollmentDetail.Location = new System.Drawing.Point(253, 0);
+            this.btnViewEnrollmentDetail.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnViewEnrollmentDetail.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnViewEnrollmentDetail.Name = "btnViewEnrollmentDetail";
             this.btnViewEnrollmentDetail.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -135,23 +137,23 @@
             this.dgvStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvStudents.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvStudents.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(224)))), ((int)(((byte)(234)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(105)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(224)))), ((int)(((byte)(234)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(105)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(67)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(204)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStudents.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(67)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(204)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStudents.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvStudents.EnableHeadersVisualStyles = false;
             this.dgvStudents.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.dgvStudents.Location = new System.Drawing.Point(40, 204);
@@ -162,6 +164,28 @@
             this.dgvStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStudents.Size = new System.Drawing.Size(870, 393);
             this.dgvStudents.TabIndex = 12;
+            // 
+            // btnViewEnrolledStudents
+            // 
+            this.btnViewEnrolledStudents.AutoSize = false;
+            this.btnViewEnrolledStudents.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnViewEnrolledStudents.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Dense;
+            this.btnViewEnrolledStudents.Depth = 0;
+            this.btnViewEnrolledStudents.DrawShadows = false;
+            this.btnViewEnrolledStudents.HighEmphasis = false;
+            this.btnViewEnrolledStudents.Icon = global::Parnada_Appsdev.Properties.Resources.info;
+            this.btnViewEnrolledStudents.Location = new System.Drawing.Point(0, 0);
+            this.btnViewEnrolledStudents.Margin = new System.Windows.Forms.Padding(0);
+            this.btnViewEnrolledStudents.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnViewEnrolledStudents.Name = "btnViewEnrolledStudents";
+            this.btnViewEnrolledStudents.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnViewEnrolledStudents.Size = new System.Drawing.Size(233, 32);
+            this.btnViewEnrolledStudents.TabIndex = 17;
+            this.btnViewEnrolledStudents.Text = "View Enrolled Students";
+            this.btnViewEnrolledStudents.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
+            this.btnViewEnrolledStudents.UseAccentColor = false;
+            this.btnViewEnrolledStudents.UseVisualStyleBackColor = true;
+            this.btnViewEnrolledStudents.Click += new System.EventHandler(this.btnViewEnrolledStudents_Click);
             // 
             // EnrollmentManagement
             // 
@@ -186,5 +210,6 @@
         private MaterialSkin.Controls.MaterialButton btnEnrollStudent;
         private MaterialSkin.Controls.MaterialButton btnViewEnrollmentDetail;
         private System.Windows.Forms.DataGridView dgvStudents;
+        private MaterialSkin.Controls.MaterialButton btnViewEnrolledStudents;
     }
 }

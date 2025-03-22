@@ -27,6 +27,12 @@ namespace Parnada_Appsdev.Controller
             dgvStudents.DataSource = repo.GetStudents();
             dgvStudents.Refresh();
         }
+
+        private void btnViewEnrolledStudents_Click(object sender, EventArgs e)
+        {
+            ShowUserControl(new ViewEnrolledStudents());
+        }
+
         private void btnEnrollStudent_Click(object sender, EventArgs e)
         {
             if (dgvStudents.SelectedRows.Count == 0)

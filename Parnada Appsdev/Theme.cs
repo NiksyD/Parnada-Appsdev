@@ -34,5 +34,6 @@ namespace Parnada_Appsdev
             dataGridView.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 172, 193);
             dataGridView.DefaultCellStyle.SelectionForeColor = Color.White;
         }
+
     }
 }

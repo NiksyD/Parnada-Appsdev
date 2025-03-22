@@ -38,14 +38,25 @@ namespace Parnada_Appsdev.Controller.EnrollmentControls
 
             foreach (DataRow row in subjects.Rows)
             {
+              
                 string subjectCode = row["SFSUBJCODE"].ToString();
                 string subjectDesc = row["SFSUBJDESC"].ToString();
+                int units = Convert.ToInt32(row["SFSUBJUNITS"]);
+                string semester = row["SFSUBJREGOFRNG"].ToString();
+                string category = row["SFSUBJCATEGORY"].ToString();
+                string status = row["SFSUBJSTATUS"].ToString();
+                string courseCode = row["SFSUBJCOURSECODE"].ToString();
+                string currCode = row["SFSUBJCURRCODE"].ToString();
 
-                // Store both the subject code and description
-                clbSubjects.Items.Add($"{subjectCode} - {subjectDesc}");
+                clbSubjects.Items.Add($"{subjectCode} - {subjectDesc} - Units: {units} - Semester: {semester} - Category: {category} - Status: {status} - Course Code: {courseCode} - Curr Code: {currCode}");
+
+
+
+
+
+
+                clbSubjects.Refresh(); // Refresh UI
             }
-
-            clbSubjects.Refresh(); // Refresh UI
         }
 
         private static readonly Dictionary<string, string> EnrollmentStatusMap = new Dictionary<string, string>
@@ -56,6 +67,15 @@ namespace Parnada_Appsdev.Controller.EnrollmentControls
 
         private void btnEnroll_Click(object sender, EventArgs e)
         {
+            var repoHeader = new RepositoryEnrollmentHeaderFile(); // Assuming you have this repository
+
+            // Check if the student is already enrolled
+            if (repoHeader.IsStudentEnrolled(studentId))
+            {
+                MessageBox.Show("The student is already enrolled.", "Enrollment Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             var selectedSubjects = GetSelectedSubjects();
             if (selectedSubjects.Count == 0)
             {
@@ -64,7 +84,6 @@ namespace Parnada_Appsdev.Controller.EnrollmentControls
             }
 
             // Step 1: Save Enrollment Header (Main Record)
-            var repoHeader = new RepositoryEnrollmentHeaderFile(); // Assuming you have this repository
             var enrollmentHeader = new EnrollmentHeaderFile
             {
                 ENRHFSTUDID = studentId,

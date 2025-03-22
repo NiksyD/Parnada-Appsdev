@@ -56,5 +56,43 @@ namespace Parnada_Appsdev.Repository
             }
             return result;
         }
+
+        public RepositoryResult DeleteEnrollmentDetail(long studentId, string subjectCode, string edpCode)
+        {
+            var result = new RepositoryResult();
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                using (var command = new SqlCommand(@"
+                DELETE FROM EnrollmentDetailFile 
+                WHERE ENRDFSTUDID = @ENRDFSTUDID 
+                AND ENRDFSTUDSUBJCDE = @ENRDFSTUDSUBJCDE 
+                AND ENRDFSTUDEDPCODE = @ENRDFSTUDEDPCODE;",
+                    connection))
+                {
+                    command.Parameters.Add(new SqlParameter("@ENRDFSTUDID", studentId));
+                    command.Parameters.Add(new SqlParameter("@ENRDFSTUDSUBJCDE", subjectCode));
+                    command.Parameters.Add(new SqlParameter("@ENRDFSTUDEDPCODE", edpCode));
+
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    result.Success = rowsAffected > 0;
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine($"SQL Exception: {ex.Message}");
+                result.Success = false;
+                result.ErrorMessage = $"SQL Exception: {ex.Message}";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+                result.Success = false;
+                result.ErrorMessage = $"Exception: {ex.Message}";
+            }
+            return result;
+        }
+
     }
 }

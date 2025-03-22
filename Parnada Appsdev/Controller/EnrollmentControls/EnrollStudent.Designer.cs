@@ -41,7 +41,6 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.cboEncoder = new MaterialSkin.Controls.MaterialComboBox();
             this.cboStatus = new MaterialSkin.Controls.MaterialComboBox();
-            this.tbTotalUnits = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialCard1.SuspendLayout();
@@ -76,6 +75,7 @@
             this.clbSubjects.Name = "clbSubjects";
             this.clbSubjects.Size = new System.Drawing.Size(870, 214);
             this.clbSubjects.TabIndex = 53;
+            this.clbSubjects.ThreeDCheckBoxes = true;
             // 
             // flowLayoutPanel3
             // 
@@ -206,11 +206,10 @@
             this.flowLayoutPanel2.AutoSize = true;
             this.flowLayoutPanel2.Controls.Add(this.cboEncoder);
             this.flowLayoutPanel2.Controls.Add(this.cboStatus);
-            this.flowLayoutPanel2.Controls.Add(this.tbTotalUnits);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(40, 243);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 30);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(820, 49);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(530, 49);
             this.flowLayoutPanel2.TabIndex = 49;
             this.flowLayoutPanel2.TabStop = true;
             // 
@@ -264,46 +263,13 @@
             "Enrolled",
             "Unenrolled"});
             this.cboStatus.Location = new System.Drawing.Point(290, 0);
-            this.cboStatus.Margin = new System.Windows.Forms.Padding(0, 0, 50, 0);
+            this.cboStatus.Margin = new System.Windows.Forms.Padding(0);
             this.cboStatus.MaxDropDownItems = 4;
             this.cboStatus.MouseState = MaterialSkin.MouseState.OUT;
             this.cboStatus.Name = "cboStatus";
             this.cboStatus.Size = new System.Drawing.Size(240, 49);
             this.cboStatus.StartIndex = 0;
             this.cboStatus.TabIndex = 53;
-            // 
-            // tbTotalUnits
-            // 
-            this.tbTotalUnits.AnimateReadOnly = true;
-            this.tbTotalUnits.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.tbTotalUnits.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tbTotalUnits.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tbTotalUnits.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.tbTotalUnits.Depth = 0;
-            this.tbTotalUnits.Enabled = false;
-            this.tbTotalUnits.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tbTotalUnits.HideSelection = true;
-            this.tbTotalUnits.Hint = "Total Units";
-            this.tbTotalUnits.LeadingIcon = null;
-            this.tbTotalUnits.Location = new System.Drawing.Point(580, 0);
-            this.tbTotalUnits.Margin = new System.Windows.Forms.Padding(0);
-            this.tbTotalUnits.MaxLength = 32767;
-            this.tbTotalUnits.MouseState = MaterialSkin.MouseState.OUT;
-            this.tbTotalUnits.Name = "tbTotalUnits";
-            this.tbTotalUnits.PasswordChar = '\0';
-            this.tbTotalUnits.PrefixSuffixText = null;
-            this.tbTotalUnits.ReadOnly = false;
-            this.tbTotalUnits.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbTotalUnits.SelectedText = "";
-            this.tbTotalUnits.SelectionLength = 0;
-            this.tbTotalUnits.SelectionStart = 0;
-            this.tbTotalUnits.ShortcutsEnabled = true;
-            this.tbTotalUnits.Size = new System.Drawing.Size(240, 48);
-            this.tbTotalUnits.TabIndex = 52;
-            this.tbTotalUnits.TabStop = false;
-            this.tbTotalUnits.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tbTotalUnits.TrailingIcon = global::Parnada_Appsdev.Properties.Resources.hastag;
-            this.tbTotalUnits.UseSystemPasswordChar = false;
             // 
             // materialLabel1
             // 
@@ -328,9 +294,9 @@
             this.materialLabel3.Location = new System.Drawing.Point(37, 26);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(374, 41);
+            this.materialLabel3.Size = new System.Drawing.Size(249, 41);
             this.materialLabel3.TabIndex = 43;
-            this.materialLabel3.Text = "Enrollment Management";
+            this.materialLabel3.Text = "Enrollment Entry";
             // 
             // EnrollStudent
             // 
@@ -359,7 +325,6 @@
         private MaterialSkin.Controls.MaterialComboBox cboEncoder;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpDateEnroll;
-        private MaterialSkin.Controls.MaterialTextBox2 tbTotalUnits;
         private MaterialSkin.Controls.MaterialComboBox cboStatus;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private Guna.UI2.WinForms.Guna2Button btnEnroll;

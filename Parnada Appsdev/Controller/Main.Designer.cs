@@ -37,9 +37,9 @@
             this.tabPageSubjectManagement = new System.Windows.Forms.TabPage();
             this.tabPageSubjectPreq = new System.Windows.Forms.TabPage();
             this.tabPageSubjectSchedManagement = new System.Windows.Forms.TabPage();
+            this.tabPageEnrollment = new System.Windows.Forms.TabPage();
             this.tabPageLogout = new System.Windows.Forms.TabPage();
             this.imageListMain = new System.Windows.Forms.ImageList(this.components);
-            this.tabPageEnrollment = new System.Windows.Forms.TabPage();
             this.tcMain.SuspendLayout();
             this.tabPageHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,7 +84,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Parnada_Appsdev.Properties.Resources.main_bg;
+            this.pictureBox1.Image = global::Parnada_Appsdev.Properties.Resources.home_bg;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1046, 612);
@@ -96,10 +96,10 @@
             // 
             this.tabPageStudent.BackColor = System.Drawing.Color.White;
             this.tabPageStudent.ImageKey = "group.png";
-            this.tabPageStudent.Location = new System.Drawing.Point(4, 31);
+            this.tabPageStudent.Location = new System.Drawing.Point(4, 58);
             this.tabPageStudent.Name = "tabPageStudent";
             this.tabPageStudent.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStudent.Size = new System.Drawing.Size(1052, 645);
+            this.tabPageStudent.Size = new System.Drawing.Size(1052, 618);
             this.tabPageStudent.TabIndex = 1;
             this.tabPageStudent.Text = "Student Database";
             // 
@@ -107,10 +107,10 @@
             // 
             this.tabPageSubjectManagement.BackColor = System.Drawing.Color.White;
             this.tabPageSubjectManagement.ImageKey = "books-stack-of-three - 1.png";
-            this.tabPageSubjectManagement.Location = new System.Drawing.Point(4, 31);
+            this.tabPageSubjectManagement.Location = new System.Drawing.Point(4, 58);
             this.tabPageSubjectManagement.Name = "tabPageSubjectManagement";
             this.tabPageSubjectManagement.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSubjectManagement.Size = new System.Drawing.Size(1052, 645);
+            this.tabPageSubjectManagement.Size = new System.Drawing.Size(1052, 618);
             this.tabPageSubjectManagement.TabIndex = 4;
             this.tabPageSubjectManagement.Text = "Subject Management";
             // 
@@ -118,10 +118,10 @@
             // 
             this.tabPageSubjectPreq.BackColor = System.Drawing.Color.White;
             this.tabPageSubjectPreq.ImageKey = "contract.png";
-            this.tabPageSubjectPreq.Location = new System.Drawing.Point(4, 31);
+            this.tabPageSubjectPreq.Location = new System.Drawing.Point(4, 58);
             this.tabPageSubjectPreq.Name = "tabPageSubjectPreq";
             this.tabPageSubjectPreq.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSubjectPreq.Size = new System.Drawing.Size(1052, 645);
+            this.tabPageSubjectPreq.Size = new System.Drawing.Size(1052, 618);
             this.tabPageSubjectPreq.TabIndex = 5;
             this.tabPageSubjectPreq.Text = "Subject Preq Management";
             // 
@@ -135,6 +135,17 @@
             this.tabPageSubjectSchedManagement.Size = new System.Drawing.Size(1052, 618);
             this.tabPageSubjectSchedManagement.TabIndex = 6;
             this.tabPageSubjectSchedManagement.Text = "Subject Sched Management";
+            // 
+            // tabPageEnrollment
+            // 
+            this.tabPageEnrollment.BackColor = System.Drawing.Color.White;
+            this.tabPageEnrollment.ImageKey = "contract-side.png";
+            this.tabPageEnrollment.Location = new System.Drawing.Point(4, 58);
+            this.tabPageEnrollment.Name = "tabPageEnrollment";
+            this.tabPageEnrollment.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageEnrollment.Size = new System.Drawing.Size(1052, 618);
+            this.tabPageEnrollment.TabIndex = 7;
+            this.tabPageEnrollment.Text = "Enrollment Management";
             // 
             // tabPageLogout
             // 
@@ -159,17 +170,6 @@
             this.imageListMain.Images.SetKeyName(5, "contract.png");
             this.imageListMain.Images.SetKeyName(6, "calendar-sched.png");
             this.imageListMain.Images.SetKeyName(7, "contract-side.png");
-            // 
-            // tabPageEnrollment
-            // 
-            this.tabPageEnrollment.BackColor = System.Drawing.Color.White;
-            this.tabPageEnrollment.ImageKey = "contract-side.png";
-            this.tabPageEnrollment.Location = new System.Drawing.Point(4, 58);
-            this.tabPageEnrollment.Name = "tabPageEnrollment";
-            this.tabPageEnrollment.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageEnrollment.Size = new System.Drawing.Size(1052, 618);
-            this.tabPageEnrollment.TabIndex = 7;
-            this.tabPageEnrollment.Text = "Enrollment Management";
             // 
             // Main
             // 

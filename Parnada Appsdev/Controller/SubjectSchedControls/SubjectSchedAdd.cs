@@ -26,35 +26,7 @@ namespace Parnada_Appsdev.Controller.SubjectSchedControls
         {
             try
             {
-                if (!Validator.ValidateControls(this))
-                {
-                    MessageBox.Show("Please fill in all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                if(tbEdpCode.Text.Length > 8)
-                {
-                    MessageBox.Show("EDP code cannot exceed 8 characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                if (tbSubjectCode.Text.Length > 15)
-                {
-                    MessageBox.Show("Subject code cannot exceed 15 characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                if (tbRoom.Text.Length > 3)
-                {
-                    MessageBox.Show("Room code cannot exceed 3 characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                if (tbSection.Text.Length > 3)
-                {
-                    MessageBox.Show("Section code cannot exceed 3 characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                ValidateControls();
 
                 RepositorySubjectSched repository = new RepositorySubjectSched();
 
@@ -110,6 +82,40 @@ namespace Parnada_Appsdev.Controller.SubjectSchedControls
             {
                 MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void ValidateControls()
+        {
+            if (!Validator.ValidateControls(this))
+            {
+                MessageBox.Show("Please fill in all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (tbEdpCode.Text.Length > 8)
+            {
+                MessageBox.Show("EDP code cannot exceed 8 characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (tbSubjectCode.Text.Length > 15)
+            {
+                MessageBox.Show("Subject code cannot exceed 15 characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (tbRoom.Text.Length > 3)
+            {
+                MessageBox.Show("Room code cannot exceed 3 characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (tbSection.Text.Length > 3)
+            {
+                MessageBox.Show("Section code cannot exceed 3 characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

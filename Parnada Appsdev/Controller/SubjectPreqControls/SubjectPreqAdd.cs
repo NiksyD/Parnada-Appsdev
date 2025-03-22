@@ -69,7 +69,6 @@ namespace Parnada_Appsdev.Controller.SubjectPreqControls
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 

@@ -151,8 +151,8 @@
             this.cboSubjectCategory.IntegralHeight = false;
             this.cboSubjectCategory.ItemHeight = 43;
             this.cboSubjectCategory.Items.AddRange(new object[] {
-            "CR - co-requisite",
-            "PR - prerequiste"});
+            "Co-Requisite",
+            "Pre-Requisite"});
             this.cboSubjectCategory.Location = new System.Drawing.Point(0, 136);
             this.cboSubjectCategory.Margin = new System.Windows.Forms.Padding(0);
             this.cboSubjectCategory.MaxDropDownItems = 4;
@@ -212,18 +212,20 @@
             // 
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            this.materialLabel3.Location = new System.Drawing.Point(11, 14);
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel3.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.materialLabel3.Location = new System.Drawing.Point(30, 25);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(290, 29);
+            this.materialLabel3.Size = new System.Drawing.Size(245, 24);
             this.materialLabel3.TabIndex = 42;
             this.materialLabel3.Text = "Subject Pre-Requisite Entry";
             // 
             // SubjectPreqAdd
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(348, 392);
             this.Controls.Add(this.materialCard1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

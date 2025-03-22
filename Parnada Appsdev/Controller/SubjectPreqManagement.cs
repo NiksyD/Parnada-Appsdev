@@ -44,32 +44,28 @@ namespace Parnada_Appsdev.Controller.EntryControls
 
         private void subjectPreqEdit_Click(object sender, EventArgs e)
         {
+            if (NoSelection()) return;
+
+            try
             {
-                if (NoSelection()) return;
+                string subjCode = dgvSubjectsPreq.SelectedRows[0].Cells[0].Value?.ToString() ?? "";
+                string subjPreCode = dgvSubjectsPreq.SelectedRows[0].Cells[1].Value?.ToString() ?? "";
+                string subjCategory = dgvSubjectsPreq.SelectedRows[0].Cells[2].Value?.ToString() ?? "";
 
-                try
+                // Open an edit form or pass data to an edit UserControl
+                using (SubjectPreqEdit subjectPreqEdit = new SubjectPreqEdit(subjCode, subjPreCode, subjCategory))
                 {
-                    string subjCode = dgvSubjectsPreq.SelectedRows[0].Cells[0].Value?.ToString() ?? "";
-                    string subjPreCode = dgvSubjectsPreq.SelectedRows[0].Cells[1].Value?.ToString() ?? "";
-                    string subjCategory = dgvSubjectsPreq.SelectedRows[0].Cells[2].Value?.ToString() ?? "";
+                    DialogResult result = subjectPreqEdit.ShowDialog();
 
-                    // Open an edit form or pass data to an edit UserControl
-                    SubjectPreqEdit subjectPreqEdit = new SubjectPreqEdit(subjCode, subjPreCode, subjCategory);
-
-                    // Ensure the UserControl is properly initialized
-                    if (subjectPreqEdit == null)
+                    if (result == DialogResult.Cancel)
                     {
-                        MessageBox.Show("Failed to initialize SubjectPreqEdit UserControl", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
+                        SubjectPreqReader(); // Call your database update logic here
                     }
-
-                    new SubjectPreqAdd().ShowDialog();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading subject prerequisite data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading subject prerequisite data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -101,7 +97,6 @@ namespace Parnada_Appsdev.Controller.EntryControls
                 }
             }
         }
-
 
         private bool NoSelection()
         {

@@ -130,12 +130,13 @@
             // 
             // tbSubjectCode
             // 
-            this.tbSubjectCode.AnimateReadOnly = false;
+            this.tbSubjectCode.AnimateReadOnly = true;
             this.tbSubjectCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.tbSubjectCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.tbSubjectCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tbSubjectCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.tbSubjectCode.Depth = 0;
+            this.tbSubjectCode.Enabled = false;
             this.tbSubjectCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbSubjectCode.HideSelection = true;
             this.tbSubjectCode.Hint = "Subject Code";
